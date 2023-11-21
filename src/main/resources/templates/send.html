@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Form</title>
+</head>
+<body>
+<form th:action="@{/receive}" method="post">
+    <label for="message">Message:
+        <input type="text" id="message" name="message">
+    </label><br>
+    <input type="submit" value="Send Message">
+</form>
+</body>
+</html>

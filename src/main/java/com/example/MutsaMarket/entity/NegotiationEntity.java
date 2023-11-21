@@ -3,18 +3,16 @@ package com.example.MutsaMarket.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
-@Table(name = "users")
 @Data
-public class UserEntity {
+@Entity
+@Table(name = "negotiation")
+public class NegotiationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false, unique = true)
-    private String username;
+    private Long itemId;
+    private Long suggestedPrice;
+    private String status;
+    private String writer;
     private String password;
-
-    private String email;
-    private String phone;
 }
